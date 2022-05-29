@@ -1,0 +1,12 @@
+D:\GameWer\universal-dll-devblog\GameWer.UI.UniversalDevblog\GameWer.UI.UniversalDevblog\bin\x64\Release\GameWer.UI.UniversalDevblog.pdb
+D:\GameWer\universal-dll-devblog\GameWer.UI.UniversalDevblog\GameWer.UI.UniversalDevblog\obj\x64\Release\GameWer.UI.UniversalDevblog.csproj.AssemblyReference.cache
+D:\GameWer\universal-dll-devblog\GameWer.UI.UniversalDevblog\GameWer.UI.UniversalDevblog\obj\x64\Release\GameWer.UI.UniversalDevblog.Properties.Resources.resources
+D:\GameWer\universal-dll-devblog\GameWer.UI.UniversalDevblog\GameWer.UI.UniversalDevblog\obj\x64\Release\GameWer.UI.UniversalDevblog.csproj.GenerateResource.cache
+D:\GameWer\universal-dll-devblog\GameWer.UI.UniversalDevblog\GameWer.UI.UniversalDevblog\obj\x64\Release\GameWer.UI.UniversalDevblog.csproj.CoreCompileInputs.cache
+D:\GameWer\universal-dll-devblog\GameWer.UI.UniversalDevblog\GameWer.UI.UniversalDevblog\obj\x64\Release\GameWer.UI.UniversalDevblog.pdb
+D:\GameWer\universal-dll-devblog\GameWer.UI.UniversalDevblog\GameWer.UI.UniversalDevblog\bin\x64\Release\GameWer.SDK.dll
+D:\GameWer\universal-dll-devblog\GameWer.UI.UniversalDevblog\GameWer.UI.UniversalDevblog\obj\x64\Release\GameWer.UI.UniversalDevblog.csproj.CopyComplete
+D:\GameWer\universal-dll-devblog\GameWer.UI.UniversalDevblog\GameWer.UI.UniversalDevblog\obj\x64\Release\GameWer.UI.UniversalDevblog.Form1.resources
+D:\GameWer\universal-dll-devblog\GameWer.UI.UniversalDevblog\GameWer.UI.UniversalDevblog\bin\x64\Release\GameWer.UI.UniversalDevblog.dll.config
+D:\GameWer\universal-dll-devblog\GameWer.UI.UniversalDevblog\GameWer.UI.UniversalDevblog\bin\x64\Release\GameWer.UI.UniversalDevblog.dll
+D:\GameWer\universal-dll-devblog\GameWer.UI.UniversalDevblog\GameWer.UI.UniversalDevblog\obj\x64\Release\GameWer.UI.UniversalDevblog.dll
