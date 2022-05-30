@@ -16,3 +16,5 @@
 - Платформа решения x64 (Обязательно! Иначе GameWer.SDK не примет ее, т.к сам состоит на x64)
 - Сборка проекта (CTRL + SHIFT + B)
 Файл будет находится в ..\\GameWer.UI.UniversalDevblog\bin\x64\Release\
+
+Лицензия MIT (MIT License)
