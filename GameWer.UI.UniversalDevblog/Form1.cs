@@ -30,11 +30,12 @@ namespace GameWer.UI.UniversalDevblog
                 VKGroupServer_StripMenuItem.Visible = false;
 
             this.notifyIcon1.MouseDoubleClick += new MouseEventHandler(notifyIcon1_MouseDoubleClick);
-            notifyIcon1.Visible = true;
-            //Task.Delay(5000).ContinueWith(_ =>
-            //{
-            //    notifyIcon1.Visible = true;
-            //});
+
+            Task.Delay(5000).ContinueWith(_ =>
+            {
+                notifyIcon1.Visible = true;
+                Hide();
+            });
         }
 
         #region Vars    
@@ -94,11 +95,14 @@ namespace GameWer.UI.UniversalDevblog
         {
             SetStatus("Online");
             Notify("Вы - Online!", "Мы смогли подключить вас к системе, вы Online!\nПриятной игры!");
+
+            OpenRust();
         }
 
         public void OnNetworkConnected()
         {
             SetStatus("Connected, auth...");
+            Notify("Connected, auth...", "Мы запустим игру автоматически, после того как вы будете Online!");
         }
 
         public void OnNetworkDisconnected(String reason)
@@ -191,8 +195,8 @@ namespace GameWer.UI.UniversalDevblog
 
             #region Start Game
             //  MessageBox.Show("Полученная директория, запуск файла игры в " + WorkingDirectory.FullName);
-          //  try
-            //{
+            try
+            {
                 if (Process.GetProcessesByName("RustClient").Any()) return;  //// Доделать
 
                 if (!String.IsNullOrWhiteSpace(structures.FileSupportRust))
@@ -203,20 +207,20 @@ namespace GameWer.UI.UniversalDevblog
                     Process.Start(startInfoHandler);
                 }
 
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.Arguments = "-show-screen-selector";
-            startInfo.WorkingDirectory = WorkingDirectory.FullName + "/";
-            startInfo.FileName = $"{WorkingDirectory.FullName}\\{structures.FileRust}";
-            startInfo.UseShellExecute = false;
-            Process.Start(startInfo).WaitForExit();
-
-
-            //  }
-            //  catch (Exception ex)
-            //  {
-            //      SendError($"Не удалось запустить {structures.FileRust}", $"В папке с {structures.FileRust} возможно отсутствует файл {(!String.IsNullOrWhiteSpace(structures.FileSupportRust) ? $"{structures.FileSupportRust} или" : "")} {structures.FileRust}, перенесите файл {structures.FileRust} в корневую папку с клиентом или свяжитесь с поддержкой");
-            //     return;
-            //  }
+                new Process()
+                {
+                    StartInfo = {
+                    Arguments = "-show-screen-selector",
+                    FileName = (WorkingDirectory.FullName + "\\RustClient.exe"),
+                    WorkingDirectory = (WorkingDirectory.FullName + "\\")
+                }
+                }.Start();
+            }
+            catch (Exception ex)
+            {
+                SendError($"Не удалось запустить {structures.FileRust}", $"В папке с {structures.FileRust} возможно отсутствует файл {(!String.IsNullOrWhiteSpace(structures.FileSupportRust) ? $"{structures.FileSupportRust} или" : "")} {structures.FileRust}, перенесите файл {structures.FileRust} в корневую папку с клиентом или свяжитесь с поддержкой");
+                return;
+            }
 
             #endregion
         }
@@ -319,7 +323,6 @@ namespace GameWer.UI.UniversalDevblog
                 if ((Opacity += 0.2d) == 1)
                 {
                     timer.Stop();
-                    OpenRust();
                 }
 
             });
